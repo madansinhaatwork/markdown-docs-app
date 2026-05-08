@@ -1,0 +1,91 @@
+
+.paneContainer {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+}
+
+.editorPane,
+.previewPane {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.paneHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(15, 22, 32, 0.55);
+}
+
+.paneTitle {
+  font-weight: 700;
+}
+
+.paneHint {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.textarea {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  padding: 16px;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  line-height: 1.5;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: rgba(232, 238, 245, 0.92);
+}
+
+.previewScroll {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 16px;
+}
+
+.resizer {
+  width: 10px;
+  cursor: col-resize;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.06),
+    transparent
+  );
+}
+
+/* Mobile: stack panes vertically */
+@media (max-width: 760px) {
+  .paneContainer {
+    flex-direction: column;
+  }
+
+  .editorPane,
+  .previewPane {
+    width: 100% !important;
+    height: 50%;
+  }
+
+  .resizer {
+    height: 10px;
+    width: 100%;
+    cursor: row-resize;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255, 255, 255, 0.06),
+      transparent
+    );
+  }
+}

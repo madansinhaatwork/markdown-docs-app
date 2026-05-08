@@ -1,0 +1,67 @@
+
+.shell {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  background: rgba(15, 22, 32, 0.75);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--accent), rgba(110, 168, 254, 0.35));
+  box-shadow: 0 0 0 6px rgba(110,168,254,0.08);
+}
+
+.title { letter-spacing: 0.2px; }
+
+.headerActions { display: flex; gap: 10px; }
+
+.primaryBtn {
+  border: 1px solid rgba(110, 168, 254, 0.35);
+  background: rgba(110, 168, 254, 0.15);
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.08s ease, background 0.15s ease;
+}
+
+.primaryBtn:hover {
+  background: rgba(110, 168, 254, 0.22);
+}
+
+.primaryBtn:active {
+  transform: translateY(1px);
+}
+
+.main {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.empty {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  text-align: center;
+}
+

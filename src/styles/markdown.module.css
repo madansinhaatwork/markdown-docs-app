@@ -1,0 +1,82 @@
+
+.md {
+  max-width: 980px;
+}
+
+.md h1, .md h2, .md h3 {
+  scroll-margin-top: 16px;
+}
+
+.md h1 { font-size: 32px; margin: 0 0 14px; }
+.md h2 { font-size: 22px; margin: 22px 0 10px; }
+.md h3 { font-size: 18px; margin: 18px 0 8px; }
+
+.md p { margin: 10px 0; line-height: 1.6; color: rgba(232, 238, 245, 0.92); }
+
+.md blockquote {
+  margin: 14px 0;
+  padding: 8px 12px;
+  border-left: 3px solid rgba(110, 168, 254, 0.6);
+  border-radius: 10px;
+  background: rgba(110, 168, 254, 0.08);
+  color: rgba(232, 238, 245, 0.86);
+}
+
+.md hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  margin: 18px 0;
+}
+
+.inlineCode {
+  padding: 2px 6px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.codeBlock {
+  margin: 16px 0;
+  box-shadow: var(--shadow);
+}
+
+.codeHeader {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  background: rgba(15, 22, 32, 0.92);
+}
+
+.codeLang {
+  font-size: 12px;
+  color: rgba(159, 176, 193, 0.95);
+}
+
+.md table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.md th, .md td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.md th {
+  text-align: left;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.md ul, .md ol {
+  padding-left: 22px;
+}
+
+.md li { margin: 6px 0; }
+
