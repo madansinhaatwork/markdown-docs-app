@@ -5,7 +5,7 @@ pipeline {
         IMAGE_NAME = "vite-react-app-image"
         CONTAINER_NAME = "vite-react-app-container"
         APP_PORT = "3001"
-        APP_DIR = "markdown-docs-app"
+        APP_DIR = "."
     }
 
     stages {
