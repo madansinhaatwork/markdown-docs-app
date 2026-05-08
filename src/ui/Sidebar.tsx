@@ -39,20 +39,23 @@ export function Sidebar({ docs, selectedId, onSelect, onRename, onDelete }: Prop
         <ul className={styles.docList}>
           {docs.map(doc => (
             <li key={doc.id} className={styles.docItem}>
-              <button
-                className={styles.docBtn}
-                data-selected={doc.id === selectedId}
-                onClick={() => onSelect(doc.id)}
-              >
-                <span className={styles.docName}>{doc.title}</span>
-                <span className={styles.docMeta}>
-                  {new Date(doc.updatedAt).toLocaleDateString(undefined, {
-                    year: 'numeric',
-                    month: 'short',
-                    day: '2-digit'
-                  })}
-                </span>
-              </button>
+              
+<button
+  className={styles.docBtn}
+  data-selected={doc.id === selectedId}
+  onClick={() => onSelect(doc.id)}
+  aria-label={doc.title}  // ✅ stable accessible name
+>
+  <span className={styles.docName}>{doc.title}</span>
+  <span className={styles.docMeta} aria-hidden="true">
+    {new Date(doc.updatedAt).toLocaleDateString(undefined, {
+      year: 'numeric',
+      month: 'short',
+      day: '2-digit'
+    })}
+  </span>
+</button>
+
               <div className={styles.docActions} aria-label="Document actions">
                 <button
                   className={styles.smallBtn}

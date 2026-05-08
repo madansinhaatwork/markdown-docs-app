@@ -1,5 +1,3 @@
-
-
 import { render, screen } from '@testing-library/react'
 import { MarkdownPreview } from '../ui/MarkdownPreview'
 
@@ -22,18 +20,15 @@ describe('MarkdownPreview', () => {
   })
 
   it('renders fenced code blocks with language label', () => {
-    const md = [
-      '```ts',
-      'const x: number = 1',
-      '```'
-    ].join('\n')
+    const md = ['```ts', 'const x: number = 1', '```'].join('\n')
+    const { container } = render(<MarkdownPreview markdown={md} />)
 
-    render(<MarkdownPreview markdown={md} />)
-
-    // language badge
+    // ✅ language badge is rendered
     expect(screen.getByText('ts')).toBeInTheDocument()
-    // code text appears
-    expect(screen.getByText(/const x/)).toBeInTheDocument()
+
+    // ✅ Prism splits tokens across spans; assert using the <code> element textContent
+    const codeEl = container.querySelector('code.language-ts')
+    expect(codeEl).toBeTruthy()
+    expect(codeEl?.textContent).toMatch(/const\s+x/i)
   })
 })
-

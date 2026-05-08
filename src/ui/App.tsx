@@ -85,9 +85,14 @@ export function App() {
           <span className={styles.title}>Markdown Docs</span>
         </div>
         <div className={styles.headerActions}>
-          <button className={styles.primaryBtn} onClick={addDoc} aria-label="Add document">
+          {/* <button className={styles.primaryBtn} onClick={addDoc} aria-label="Add document">
             New
-          </button>
+          </button> */}
+          
+<button className={styles.primaryBtn} onClick={addDoc}>
+  New
+</button>
+
         </div>
       </header>
 

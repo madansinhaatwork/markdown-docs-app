@@ -21,7 +21,8 @@ describe('App', () => {
     render(<App />)
 
     // Click the second seeded document
-    await user.click(screen.getByRole('button', { name: /Markdown Formatting/i }))
+    // await user.click(screen.getByRole('button', { name: /Markdown Formatting/i }))
+    await user.click(screen.getByRole('button', { name: 'Markdown Formatting' }))
 
     // Editor should update to selected doc content
     const editor = screen.getByLabelText('Markdown editor') as HTMLTextAreaElement
